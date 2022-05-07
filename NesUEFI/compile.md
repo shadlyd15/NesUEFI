@@ -30,15 +30,15 @@ Change the following macros to locate the libraries and headers installed on the
 IMAGE 			= uefi_app 
 TARGET 			= main.efi 
 
-INCDIR 			:= /usr/local/include
-LIBDIR			=/usr/local/lib
+INCDIR 			= /usr/local/include
+LIBDIR			= /usr/local/lib
 EFILIB          = /usr/local/lib
 ```
 ## Run on qemu :
 ### Locate OVMF  in Makefile:
 To run the compiled application in qemu we need OVMF for UEFI emulation. OVMF is a port of Intel's tianocore firmware to the qemu virtual machine. Download it from here.
 ```makefile
-OVMF_DIR 		:= ../OVMFbin
+OVMF_DIR 		= ../OVMFbin
 ```
 Change the OVMF directory in the makefile.
 

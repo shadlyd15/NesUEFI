@@ -97,9 +97,7 @@ img:
 	mmd -i $(IMAGE).img ::/EFI/BOOT
 	mcopy -i $(IMAGE).img $(TARGET) ::/EFI/BOOT
 	mcopy -i $(IMAGE).img startup.nsh ::
-	mcopy -i $(IMAGE).img Test.nes ::
-	mcopy -i $(IMAGE).img 1942.nes ::
-	mcopy -i $(IMAGE).img SM.nes ::
+	mcopy -i $(IMAGE).img nestest.nes ::
 	mcopy -i $(IMAGE).img splash.bmp ::
 	# Add your roms here
 
