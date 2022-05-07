@@ -131,18 +131,6 @@ void setTextColor(UINT32 c) { textcolor = textbgcolor = c; }
 
 /**********************************************************************/
 /*!
-  @brief   Set text font color with custom background color
-  @param   c   16-bit 5-6-5 Color to draw text with
-  @param   bg  16-bit 5-6-5 Color to draw background/fill with
-*/
-/**********************************************************************/
-// void setTextColor(UINT32 c, UINT32 bg) {
-//   textcolor = c;
-//   textbgcolor = bg;
-// }
-
-/**********************************************************************/
-/*!
 @brief  Set whether text that is too long for the screen width should
         automatically wrap around to the next line (else clip right).
 @param  w  true for wrapping, false for clipping

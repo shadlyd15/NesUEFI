@@ -49,8 +49,8 @@ To port this project, replace the following functions by your own:
 
 // fill the screen with background color
 void nes_set_bg_color(int c){
-  nes_set_bg(nes_color_palette(c));
-  // nes_flip_display();
+    nes_set_bg(nes_color_palette(c));
+    // nes_flip_display();
 }
 
 // flush pixel buffer to frame buffer
@@ -70,7 +70,7 @@ void nes_hal_init(){
 
 // display and empty the current frame buffer
 void nes_flip_display(){
-  nes_gfx_swap();
+    nes_gfx_swap();
 }
 
 // query key-press status

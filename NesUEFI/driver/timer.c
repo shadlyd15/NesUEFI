@@ -6,11 +6,9 @@
 EFI_EVENT  TimerEvent;
 
 
-EFIAPI void TimerHandler (
-  IN EFI_EVENT  Event,
-  IN VOID       *Context
-  )
-{    kernel.ticks++;   }
+EFIAPI void TimerHandler ( IN EFI_EVENT  Event, IN void *Context){    
+    kernel.ticks++;   
+}
 
 unsigned long long timer_ticks(){
     return kernel.ticks;
