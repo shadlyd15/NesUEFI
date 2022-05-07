@@ -99,6 +99,12 @@ Below games are currently tested on real hardware. But NesUEFI is not only limit
 - [x] F1 Race
 
 ## Screenshots
+
+![alt text](/screenshots/0.png "Menu")
+![alt text](/screenshots/1.png "Super Mario")
+![alt text](/screenshots/2.png "1942")
+![alt text](/screenshots/3.png "Super Arabian")
+
 ## TODO
 - [x] Graphics
 - [x] Timer
