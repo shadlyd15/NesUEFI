@@ -12,7 +12,7 @@ typedef enum {
 
 void render_menu(UINT16 key);
 void render_splash_screen();
-int populate_menu_items();
+int list_file_browser();
 ui_state_t ui_manage_states();
 void ui_key_handler(uint32_t key);
 

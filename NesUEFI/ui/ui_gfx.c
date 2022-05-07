@@ -98,7 +98,7 @@ void save_rom_info(EFI_FILE_INFO *info){
     }
 }
 
-int populate_menu_items(){
+int list_file_browser(){
     EFI_DEVICE_PATH * dp;
     EFI_FILE_HANDLE root = get_volume(kernel.image_handle, (void*) &dp);
     list_directory(root, dp, save_rom_info);

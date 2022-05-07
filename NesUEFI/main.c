@@ -52,7 +52,7 @@ efi_main (EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *systab){
 	}
 
     adafruit_gfx_init(kernel.graphics->Mode->Info->HorizontalResolution, kernel.graphics->Mode->Info->VerticalResolution);
-	populate_menu_items();
+	list_file_browser();
 	keyboard_init(ui_key_handler);
 
 	#if 1
