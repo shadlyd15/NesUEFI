@@ -22,7 +22,7 @@ Go to gnu-efi source folder
 	make
 	make install
 ```
-[Here](compile_guide.md) is a guide you can follow for more details on how to compile and install gnu-efi applications.
+[Here](compile_guide.md) is a guide you can follow for more details on how to compile and run gnu-efi applications.
  
 ## Compile NesUEFI
 Change the following macros in makefile to locate GNU-EFI **libraries** and **headers** installed on the previous step.
