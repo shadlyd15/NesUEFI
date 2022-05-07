@@ -72,7 +72,7 @@ efi_main (EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *systab){
 
 	#endif // #if 1
 
-    Print(L"EFI EXIT : %r\n", rc);
+	Print(L"EFI EXIT : %r\n", rc);
 	return EFI_SUCCESS;
 }
 
