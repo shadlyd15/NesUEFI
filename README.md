@@ -25,9 +25,9 @@ Here is a guide you can follow for more details on how to compile and install gn
 Change the following macros in makefile to locate GNU-EFI **libraries** and **headers** installed on the previous step.
 
 ```makefile
-	INCDIR 			= /usr/local/include
-	LIBDIR			= /usr/local/lib
-	EFILIB          = /usr/local/lib
+	INCDIR	= /usr/local/include
+	LIBDIR	= /usr/local/lib
+	EFILIB	= /usr/local/lib
 ```
 
 # NesUEFI on qemu :
