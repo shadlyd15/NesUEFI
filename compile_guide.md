@@ -62,7 +62,7 @@ It will do the following tasks :
 ```
 ### Run :
 ```bash
-make run
+	make run
 ```
 ## Running on real hardware :
 - Format a pendrive with FAT32 file system.
