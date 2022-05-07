@@ -1,5 +1,8 @@
 
 # NesUEFI - A bootable NES Emulator running on UEFI
+
+![alt text](/splash.bmp "splash")
+
 **NesUEFI** is a **NES Emulator running without an operating system** directly on **Unified Extensible Firmware Interface (UEFI).** Simply place **NesUEFI** and nes roms in a pendrive and play.  **NesUEFI file browser**  will show the available roms. The core drivers (Graphics, File System, Keyboard, Timer) are written in c using **GNU-EFI** and the emulator part is a port of [LiteNES](https://github.com/NJU-ProjectN/LiteNES). Adafruit GFX Graphics Library is ported for GNU-EFI ecosystem in C for high level graphics operations and text rendering. 
 
 # Compile NesUEFI
@@ -129,8 +132,8 @@ Below games are currently tested on real hardware. But NesUEFI is not only limit
 
 ![alt text](/screenshots/0.png "Menu")
 ![alt text](/screenshots/1.png "Super Mario")
-![alt text](/screenshots/2.png "1942")
-![alt text](/screenshots/3.png "Super Arabian")
+![alt text](/screenshots/2.png "Super Arabian")
+![alt text](/screenshots/3.png "1942")
 
 # License 
 Licensed under the [MIT](https://github.com/shadlyd15/NesUEFI/blob/master/LICENSE) License.
