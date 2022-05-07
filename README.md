@@ -44,20 +44,20 @@ Change **OVMF_DIR** directory in the makefile.
 
 ### Create Image
 Add your roms here in the makefile to write it to your image. For example : test_1.nes, test_2.nes
-	```makefile
-		mcopy -i $(IMAGE).img splash.bmp ::
-		# Add your roms here
-		mcopy -i $(IMAGE).img test_1.nes ::
-		mcopy -i $(IMAGE).img test_2.nes ::
-	```
-	```bash
-		make img
-	```
+```makefile
+	mcopy -i $(IMAGE).img splash.bmp ::
+	# Add your roms here
+	mcopy -i $(IMAGE).img test_1.nes ::
+	mcopy -i $(IMAGE).img test_2.nes ::
+```
+```bash
+	make img
+```
 
 ### Run
-	```bash
-		make run
-	```
+```bash
+	make run
+```
 # NesUEFI on real hardware
 **Do at your own risk. Under no circumstances shall the author be liable for any damage.** 
 Technically NesUEFI should not mess with your system. But you should at least know what you are doing. 
@@ -73,17 +73,17 @@ Technically NesUEFI should not mess with your system. But you should at least kn
 # Demo on Real Hardware
 
 ## Controls 
-	| NesUEFI Key | Keyboard Key |  
-	| ----------- | ----------- |  
-	| Up | W |
-	| Down | S |
-	| Left | A |
-	| Right | D |
-	| Select | U |
-	| Start | I |
-	| A | K |
-	| B | J |
-	| Reload | R |
+| NesUEFI Key | Keyboard Key |  
+| ----------- | ----------- |  
+| Up | W |
+| Down | S |
+| Left | A |
+| Right | D |
+| Select | U |
+| Start | I |
+| A | K |
+| B | J |
+| Reload | R |
 ## Known Issues
 - Mappers are not implemented yet. 
 - It does not support Audio emulation yet. 
