@@ -27,11 +27,11 @@ Go to gnu-efi source folder
 ## Compile NesUEFI
 Change the following macros in makefile to locate GNU-EFI **libraries** and **headers** installed on the previous step.
 
-	```makefile
-		INCDIR		= /usr/local/include
-		LIBDIR		= /usr/local/lib
-		EFILIB		= /usr/local/lib
-	```
+```makefile
+	INCDIR		= /usr/local/include
+	LIBDIR		= /usr/local/lib
+	EFILIB		= /usr/local/lib
+```
 
 # NesUEFI on qemu :
 
