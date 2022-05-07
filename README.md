@@ -35,7 +35,7 @@ Change the following macros in makefile to locate GNU-EFI **libraries** and **he
 ### Locate OVMF  in Makefile:
 To run the compiled application in qemu we need OVMF for UEFI emulation. OVMF is a port of Intel's tianocore firmware to the qemu virtual machine.
 ```makefile
-	OVMF_DIR 		= ../OVMF
+	OVMF_DIR	= ../OVMF
 ```
 Change **OVMF_DIR** directory in the makefile.
 
