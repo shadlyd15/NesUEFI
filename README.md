@@ -19,8 +19,8 @@
 ## Compile and install GNU-EFI Library
 Go to gnu-efi source folder
 ```bash
-	make
-	make install
+make
+make install
 ```
 [Here](compile_guide.md) is a guide you can follow for more details on how to compile and run gnu-efi applications.
  
@@ -28,9 +28,9 @@ Go to gnu-efi source folder
 Change the following macros in makefile to locate GNU-EFI **libraries** and **headers** installed on the previous step.
 
 ```makefile
-	INCDIR		= /usr/local/include
-	LIBDIR		= /usr/local/lib
-	EFILIB		= /usr/local/lib
+INCDIR		= /usr/local/include
+LIBDIR		= /usr/local/lib
+EFILIB		= /usr/local/lib
 ```
 
 # NesUEFI on qemu :
@@ -38,25 +38,25 @@ Change the following macros in makefile to locate GNU-EFI **libraries** and **he
 ### Locate OVMF  in Makefile:
 To run the compiled application in qemu we need OVMF for UEFI emulation. OVMF is a port of Intel's tianocore firmware to the qemu virtual machine.
 ```makefile
-	OVMF_DIR		= ../OVMF
+OVMF_DIR		= ../OVMF
 ```
 Change **OVMF_DIR** directory in the makefile.
 
 ### Create Image
 Add your roms here in the makefile to write it to your image. For example : test_1.nes, test_2.nes
 ```makefile
-	mcopy -i $(IMAGE).img splash.bmp ::
-	# Add your roms here
-	mcopy -i $(IMAGE).img test_1.nes ::
-	mcopy -i $(IMAGE).img test_2.nes ::
+mcopy -i $(IMAGE).img splash.bmp ::
+# Add your roms here
+mcopy -i $(IMAGE).img test_1.nes ::
+mcopy -i $(IMAGE).img test_2.nes ::
 ```
 ```bash
-	make img
+make img
 ```
 
 ### Run
 ```bash
-	make run
+make run
 ```
 # NesUEFI on real hardware
 **Do at your own risk. Under no circumstances shall the author be liable for any damage.** 
