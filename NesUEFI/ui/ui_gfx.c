@@ -51,11 +51,11 @@ bool load_current_nes_file(){
 
     if (fce_load_rom((char*) Buffer) == 0){
         // Print(L"ROM LOADED\n\r");
-        draw_menu(L "ROM LOADED");
+        draw_menu(L"ROM LOADED");
         rc = true;
     }
     else{
-        draw_menu(L "ROM LOAD ERROR");
+        draw_menu(L"ROM LOAD ERROR");
     }
     FreePool(Buffer);
     return rc;
@@ -92,7 +92,7 @@ void render_menu(UINT16 key){
 }
 
 void save_rom_info(EFI_FILE_INFO *info){
-    if ((strstr_16(info->FileName, L ".nes")) || (strstr_16(info->FileName, L ".NES"))){
+    if ((strstr_16(info->FileName, L".nes")) || (strstr_16(info->FileName, L".NES"))){
         StrCpy(rom_collection[total_roms], info->FileName);
         total_roms++;
     }
@@ -143,7 +143,7 @@ void render_splash_screen(){
     EFI_DEVICE_PATH * dp;
     EFI_FILE_HANDLE root = get_volume(kernel.image_handle, (void*) &dp);
 
-    CHAR16 *FileName = L "splash.bmp";
+    CHAR16 *FileName = L"splash.bmp";
     EFI_FILE_HANDLE FileHandle;
     graphics_clear_framebuffer(kernel.graphics);
     /*open the file */
