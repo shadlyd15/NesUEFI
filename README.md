@@ -98,12 +98,6 @@ Below games are currently tested on real hardware. But NesUEFI is not only limit
 - [x] 1942
 - [x] F1 Race
 
-## Screenshots
-
-![alt text](/screenshots/0.png "Menu")
-![alt text](/screenshots/1.png "Super Mario")
-![alt text](/screenshots/2.png "1942")
-![alt text](/screenshots/3.png "Super Arabian")
 
 ## TODO
 - [x] Graphics
@@ -130,6 +124,13 @@ Below games are currently tested on real hardware. But NesUEFI is not only limit
 - https://blog.fpmurphy.com/2015/08/display-bmp-details-and-image-in-uefi-shell.html#ixzz7SHLiufWS
 - https://unsplash.com/photos/UqRnUzV5pjQ
 - https://www.qmtpro.com/~nes
+
+## Screenshots
+
+![alt text](/screenshots/0.png "Menu")
+![alt text](/screenshots/1.png "Super Mario")
+![alt text](/screenshots/2.png "1942")
+![alt text](/screenshots/3.png "Super Arabian")
 
 # License 
 Licensed under the [MIT](https://github.com/shadlyd15/NesUEFI/blob/master/LICENSE) License.
