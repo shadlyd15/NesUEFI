@@ -58,7 +58,7 @@ make img
 make run
 ```
 # NesUEFI on real hardware
-**Do at your own risk. Under no circumstances shall the author be liable for any damage.** 
+**Do at your own risk. Under no circumstances shall the author be liable for any damage.**
 Technically NesUEFI should not mess with your system. But you should at least know what you are doing. 
 
 - Format a pendrive with **FAT32** file system.
