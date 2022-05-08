@@ -1,7 +1,7 @@
 #define NES_FPS 			60
 #define NES_SCREEN_WIDTH 	256
 #define NES_SCREEN_HEIGHT 	240
-#define NES_SCREEN_ZOOM 	2
+#define NES_SCREEN_ZOOM 	1.5
 
 #define KEY_A			37	// k
 #define KEY_B			36	// j

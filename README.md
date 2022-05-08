@@ -120,6 +120,7 @@ Below games are currently tested on real hardware. But NesUEFI is not only limit
 - https://wiki.osdev.org/GNU-EFI
 - https://wiki.osdev.org/UEFI_App_Bare_Bones
 - https://wiki.osdev.org/Loading_files_under_UEFI
+- https://uefi.org/sites/default/files/resources/UEFI_Spec_2_8_final.pdf
 - https://github.com/NJU-ProjectN/LiteNES
 - https://learn.adafruit.com/adafruit-gfx-graphics-library
 - https://edk2-devel.narkive.com/WhxSiG6I/edk2-directory-file-system-traversal-example
