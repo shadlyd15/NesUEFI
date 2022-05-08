@@ -71,7 +71,7 @@ Technically NesUEFI should not mess with your system. But you should at least kn
 - Copy your .nes roms in the pendrive.
 
 # Demo on Real Hardware
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Juc1LT7Xls/0.jpg)](https://www.youtube.com/watch?v=Juc1LT7Xls)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/-Juc1LT7Xls/0.jpg)](https://www.youtube.com/watch?v=-Juc1LT7Xls)
 ## Controls 
 | NesUEFI Key | Keyboard Key |  
 | ----------- | ----------- |  
