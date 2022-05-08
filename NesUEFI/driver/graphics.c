@@ -175,8 +175,7 @@ void graphics_clear_framebuffer(EFI_GRAPHICS_OUTPUT_PROTOCOL *gop){
 	}
 }
 
-EFI_STATUS
-graphics_draw_bitmap( EFI_GRAPHICS_OUTPUT_PROTOCOL *gop, 
+EFI_STATUS graphics_draw_bitmap( EFI_GRAPHICS_OUTPUT_PROTOCOL *gop, 
 					  int x_offset,
 					  int y_offset,
 		              EFI_HANDLE *bmp_buffer){

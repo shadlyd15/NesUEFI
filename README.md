@@ -1,9 +1,8 @@
-
 # NesUEFI - A bootable NES Emulator running on UEFI
 
 ![alt text](/splash.bmp "splash")
 
-**NesUEFI** is a **NES Emulator running without an operating system** directly on **Unified Extensible Firmware Interface (UEFI).** Simply place **NesUEFI** and nes roms in a pendrive and play.  **NesUEFI file browser**  will show the available roms. The core drivers (Graphics, File System, Keyboard, Timer) are written in c using **GNU-EFI** and the emulator part is a port of [LiteNES](https://github.com/NJU-ProjectN/LiteNES). Adafruit GFX Graphics Library is ported for GNU-EFI ecosystem in C for high level graphics operations and text rendering. 
+**NesUEFI** is a **NES Emulator running without an operating system** directly on **Unified Extensible Firmware Interface (UEFI).** Simply place **NesUEFI** and nes roms in a pendrive and play.  **NesUEFI file browser**  will show the available roms. The core drivers (Graphics, File System, Timer) are written in c using **GNU-EFI** and the emulator part is a port of [LiteNES](https://github.com/NJU-ProjectN/LiteNES). Adafruit GFX Graphics Library is ported for GNU-EFI ecosystem in C for high level graphics operations and text rendering. 
 
 # Compile NesUEFI
 ## Requirements
@@ -68,7 +67,8 @@ Technically NesUEFI should not mess with your system. But you should at least kn
 - Copy **bootx64.efi** or **bootia32.efi** to boot folder.
 - For **64 bit** application the pendrive should look like this : **/efi/boot/bootx64.efi** 
 - For **32 bit** application the pendrive should look like this : **/efi/boot/bootia32.efi** 
-- Simply place your roms in the pendrive. **NesUEFI file browser** will show the available roms. 
+- Copy **splash.bmp** on the root folder of the pendrive
+- Copy your .nes roms in the pendrive.
 
 # Demo on Real Hardware
 Video Coming Soon
@@ -87,8 +87,8 @@ Video Coming Soon
 ## Known Issues
 - Mappers are not implemented yet. 
 - It does not support Audio emulation yet. 
-- EFI only have a simple text input protocol. So it only recognizes input character but not keystroke. So key press and release events are emulated by holding down a key until a new key is pressed. Otherwise we can not emulate multi key press events.
 - Only single player is supported. 
+- NesUEFI only supports PS/2 keyboard. Most of the laptop keyboards should support it.
 
 ## Tested Games
 Below games are currently tested on real hardware. But NesUEFI is not only limited to these games. It should technically run all the classic roms that use mapper 0. [Here](https://nesdir.github.io/mapper0.html) is a list of mapper 0 games.

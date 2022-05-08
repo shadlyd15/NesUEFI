@@ -40,6 +40,8 @@ OVMF_DIR 		= 	../OVMF
 CC              = 	gcc
 OBJCOPY 		= 	objcopy
 
+BUILDDIR		=	bin
+
 %.efi: %.so
 	$(OBJCOPY) -j .text -j .sdata -j .data -j .dynamic -j .dynsym -j .rel \
 		-j .rela -j .reloc -S --target=$(FORMAT) $*.so $@

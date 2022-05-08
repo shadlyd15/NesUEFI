@@ -163,12 +163,11 @@ void render_splash_screen(){
 }
 
 void ui_key_handler(uint32_t key){
-    if (g_ui_state == UI_STATE_MENU){
+    if(g_ui_state == UI_STATE_MENU){
         render_menu(key);
     }
-    else if (g_ui_state == UI_STATE_PLAY){
-        hal_nes_set_key(key);
-        if (key == 'r'){
+    else if(g_ui_state == UI_STATE_PLAY){
+        if(key == KEY_REBOOT){
             g_ui_state = UI_STATE_SPLASH;
         }
     }

@@ -55,11 +55,9 @@ efi_main (EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *systab){
 	list_file_browser();
 	keyboard_init(ui_key_handler);
 
-	#if 1
-
 	unsigned long last_frame = 0;
 	while(1){
-		rc = keyboard_poll();
+		keyboard_poll();
 		const unsigned long now = (unsigned long)timer_ticks();
         if ((now - last_frame) > TICK_PER_SECOND/NES_FPS){
             last_frame = now;
@@ -69,8 +67,6 @@ efi_main (EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *systab){
             }
         }
 	}
-
-	#endif // #if 1
 
 	Print(L"EFI EXIT : %r\n", rc);
 	return EFI_SUCCESS;
