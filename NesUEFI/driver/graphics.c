@@ -112,20 +112,16 @@ EFI_STATUS graphics_set_mode(EFI_GRAPHICS_OUTPUT_PROTOCOL *gop){
 
 	for (i = 0; i < imax; i++) {
 		UINTN SizeOfInfo;
-		rc = uefi_call_wrapper(gop->QueryMode, 4, gop, i, &SizeOfInfo,
-					&info);
+		rc = uefi_call_wrapper(gop->QueryMode, 4, gop, i, &SizeOfInfo, &info);
 		if (EFI_ERROR(rc) && rc == EFI_NOT_STARTED) {
 			Print(L"gop->QueryMode() returned %r\n", rc);
 			Print(L"Trying to start GOP with SetMode().\n");
-			rc = uefi_call_wrapper(gop->SetMode, 2, gop,
-				gop->Mode ? gop->Mode->Mode : 0);
-			rc = uefi_call_wrapper(gop->QueryMode, 4, gop, i,
-				&SizeOfInfo, &info);
+			rc = uefi_call_wrapper(gop->SetMode, 2, gop, gop->Mode ? gop->Mode->Mode : 0);
+			rc = uefi_call_wrapper(gop->QueryMode, 4, gop, i, &SizeOfInfo, &info);
 		}
 
 		if (EFI_ERROR(rc)) {
-			Print(L"%d: Bad response from QueryMode: %r (%d)\n",
-			      i, rc, rc);
+			Print(L"%d: Bad response from QueryMode: %r (%d)\n", i, rc, rc);
 			continue;
 		}
 

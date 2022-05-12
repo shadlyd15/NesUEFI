@@ -3,7 +3,7 @@
 
 #include <efi.h>
 
-#define TICK_PER_SECOND 120
+#define TICK_PER_SECOND 150
 
 EFI_STATUS timer_init(uint32_t tps);
 unsigned long long timer_ticks();

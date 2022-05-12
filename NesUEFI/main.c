@@ -43,30 +43,33 @@ efi_main (EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *systab){
 	rc = graphics_init(&gop);
 	if (rc == EFI_SUCCESS){
 		Print(L"Graphics Protocol Intialized : %r\n", rc);
+		// graphics_print_modes(gop);
 		rc = graphics_set_mode(gop);
 		if (rc == EFI_SUCCESS){
 			Print(L"Graphics Mode Set : %r\n", rc);
 			Print(L"\a");
 			kernel.graphics = gop;
+
+			adafruit_gfx_init(kernel.graphics->Mode->Info->HorizontalResolution, kernel.graphics->Mode->Info->VerticalResolution);
+			list_file_browser();
+			keyboard_init(ui_key_handler);
 		}
 	}
 
-	adafruit_gfx_init(kernel.graphics->Mode->Info->HorizontalResolution, kernel.graphics->Mode->Info->VerticalResolution);
-	list_file_browser();
-	keyboard_init(ui_key_handler);
-
+	#if 1
 	unsigned long last_frame = 0;
-	while(1){
+	while(rc == EFI_SUCCESS){
 		keyboard_poll();
+        ui_state_t state = ui_manage_states();
 		const unsigned long now = (unsigned long)timer_ticks();
-        if ((now - last_frame) > TICK_PER_SECOND/NES_FPS){
+        if ((now - last_frame) > TICK_PER_SECOND/NES_FPS*1.0){
             last_frame = now;
-            ui_state_t state = ui_manage_states();
             if(state == UI_STATE_PLAY){
                 nes_gfx_swap();
             }
         }
 	}
+	#endif
 
 	Print(L"EFI EXIT : %r\n", rc);
 	return EFI_SUCCESS;

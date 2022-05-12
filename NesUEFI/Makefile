@@ -102,6 +102,7 @@ img:
 	mcopy -i $(IMAGE).img splash.bmp ::
 	# Add your roms here
 	mcopy -i $(IMAGE).img nestest.nes ::
+	mcopy -i $(IMAGE).img SMB.nes ::
 
 run:
 	qemu-system-x86_64  -drive format=raw,file=$(IMAGE).img -m 256M -cpu qemu64 \
