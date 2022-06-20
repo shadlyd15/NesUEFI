@@ -38,11 +38,11 @@ efi_main (EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *systab){
 	Print(L"Initializing NesUEFI ...\n");
 
 	rc = timer_init(TICK_PER_SECOND);
-	Print(L"Timer Intialized : %r\n", rc);
+	Print(L"Timer Initialized : %r\n", rc);
 	ST->BootServices->SetWatchdogTimer(0, 0, 0, NULL);
 	rc = graphics_init(&gop);
 	if (rc == EFI_SUCCESS){
-		Print(L"Graphics Protocol Intialized : %r\n", rc);
+		Print(L"Graphics Protocol Initialized : %r\n", rc);
 		rc = graphics_set_mode(gop);
 		if (rc == EFI_SUCCESS){
 			Print(L"Graphics Mode Set : %r\n", rc);
